@@ -27,7 +27,7 @@ class Linear(Layer):
 
     def forward(self, inputs: Tensor) ->Tensor:
         self.inputs = inputs
-        return input @ self.params["w"] + self.params["b"]
+        return inputs @ self.params["w"] + self.params["b"]
 
     def backward(self, grad: Tensor) -> Tensor:
         '''
